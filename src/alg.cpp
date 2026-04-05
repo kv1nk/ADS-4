@@ -21,7 +21,7 @@ void QuickSort(int arr[], int p, int r) {
   if (i < r) QuickSort(arr, i, r);
 }
 
-int countPairs1(const int* arr, int len, int value) {
+int countPairs1(int *arr, int len, int value) {
   int res = 0;
   for (int i = 0; i < len; i++) {
     for (int j = 0; j < len; j++) {
@@ -32,7 +32,7 @@ int countPairs1(const int* arr, int len, int value) {
   }
   return res / 2;
 }
-int countPairs2(int* arr, int len, int value) {
+int countPairs2(int *arr, int len, int value) {
   int res = 0;
   QuickSort(arr, 0, len - 1);
   for (int i = 0; i < len; i++) {
@@ -45,7 +45,7 @@ int countPairs2(int* arr, int len, int value) {
   }
   return res;
 }
-int countPairs3(int* arr, int len, int value) {
+int countPairs3(int *arr, int len, int value) {
   int res = 0;
   QuickSort(arr, 0, len - 1);
 
